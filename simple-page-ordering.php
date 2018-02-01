@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Simple Page Ordering
+Plugin Name: Simple Page Ordering (Modified)
 Plugin URI: http://10up.com/plugins/simple-page-ordering-wordpress/
 Description: Order your pages and hierarchical post types using drag and drop on the built in page list. For further instructions, open the "Help" tab on the Pages screen.
-Version: 2.2.4
+Version: 2.2.5 | DO NOT UPDATE
 Author: Jake Goldman, 10up
 Author URI: http://10up.com
 License: GPLv2 or later
@@ -50,7 +50,7 @@ class Simple_Page_Ordering {
 	 * Loads the plugin textdomain
 	 */
 	public static function load_textdomain() {
-		load_plugin_textdomain( 'simple-page-ordering', false, dirname( plugin_basename( __FILE__ ) ) . '/localization/' ); 
+		load_plugin_textdomain( 'simple-page-ordering', false, dirname( plugin_basename( __FILE__ ) ) . '/localization/' );
 	}
 
 	/**
@@ -287,7 +287,7 @@ class Simple_Page_Ordering {
 			$query_string = add_query_arg( 'order', 'asc', $query_string );
 		}
 		$views['byorder'] = sprintf('<a href="%s" class="%s">%s</a>', $query_string, $class, __("Sort by Order", 'simple-page-ordering'));
-			
+
 		return $views;
 	}
 
